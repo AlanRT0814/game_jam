@@ -355,6 +355,7 @@ texture = ExtResource("2_v4558")
 12:15/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_x7jfl"]
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_t8i4w")
 
 [node name="Game" type="Node2D"]
@@ -372,7 +373,7 @@ tile_map_data = PackedByteArray("AAD7/wEAAAACAAIAAAD8/wEAAAACAAIAAAD9/wEAAAACAAI
 tile_set = SubResource("TileSet_2xhkv")
 
 [node name="fg" type="TileMapLayer" parent="TileMap"]
-tile_map_data = PackedByteArray("AAD7/wIAAAABAAEAAAD8/wIAAAABAAEAAAD9/wIAAAABAAEAAAD+/wIAAAABAAEAAAD//wIAAAABAAEAAAAAAAIAAAABAAEAAAD8/wEAAAANAAsAAAD8/wAAAAANAAoAAAA=")
+tile_map_data = PackedByteArray("AAD7/wIAAAABAAEAAAD8/wIAAAACAAEAAAD9/wIAAAACAAEAAAD+/wIAAAACAAEAAAD//wIAAAACAAEAAAAAAAIAAAACAAEAAAD8/wEAAAANAAsAAAD8/wAAAAANAAoAAAABAAEAAAAFAAEAAAACAAAAAAAFAAEAAAABAAIAAAAFAAIAAAACAAEAAAAFAAIAAAADAAAAAAACAAEAAAAEAAAAAAACAAEAAAAFAAAAAAACAAEAAAA=")
 tile_set = SubResource("TileSet_x7jfl")
 
 [node name="Knight" parent="." instance=ExtResource("1_w7l5v")]
