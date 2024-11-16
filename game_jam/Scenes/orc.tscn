@@ -1,8 +1,33 @@
-[gd_scene load_steps=17 format=3 uid="uid://dddmyh6vsxf6e"]
+[gd_scene load_steps=24 format=3 uid="uid://dddmyh6vsxf6e"]
 
 [ext_resource type="Script" path="res://Scripts/orc.gd" id="1_ugxrt"]
 [ext_resource type="Texture2D" uid="uid://ce6w75ft3jkct" path="res://Assets/sprites/Orc/Orc-Hurt.png" id="2_14a02"]
+[ext_resource type="Texture2D" uid="uid://kfjidq3q1oet" path="res://Assets/sprites/Orc/Orc-Attack01.png" id="2_r7wis"]
 [ext_resource type="Texture2D" uid="uid://cd2nux2kxx00k" path="res://Assets/sprites/Orc/Orc-Idle.png" id="3_cur07"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_npolv"]
+atlas = ExtResource("2_r7wis")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvbjc"]
+atlas = ExtResource("2_r7wis")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5msd"]
+atlas = ExtResource("2_r7wis")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpmtp"]
+atlas = ExtResource("2_r7wis")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7uyph"]
+atlas = ExtResource("2_r7wis")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b6bkj"]
+atlas = ExtResource("2_r7wis")
+region = Rect2(500, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ri0yy"]
 atlas = ExtResource("2_14a02")
@@ -46,6 +71,29 @@ region = Rect2(500, 0, 100, 100)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_q8iyi"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_npolv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kvbjc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r5msd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mpmtp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7uyph")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b6bkj")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ri0yy")
@@ -97,10 +145,13 @@ script = ExtResource("1_ugxrt")
 
 [node name="Orc_animation" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_q8iyi")
-animation = &"hit"
+animation = &"attack"
 autoplay = "idle"
+frame_progress = 0.394988
 script = SubResource("GDScript_33vpi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_qo78n")
+
+[node name="Timer" type="Timer" parent="."]
