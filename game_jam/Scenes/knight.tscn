@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://dtnh86t6rwlfl"]
 
 [ext_resource type="Script" path="res://Scripts/knight.gd" id="1_kpxol"]
-[ext_resource type="Texture2D" uid="uid://dhkaeihepste6" path="res://Assets/Knight/Knight_Idle.png" id="1_ve80c"]
+[ext_resource type="Texture2D" uid="uid://dhkaeihepste6" path="res://Assets/sprites/Knight/Knight_Idle.png" id="1_ve80c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7ac5x"]
 atlas = ExtResource("1_ve80c")
@@ -63,7 +63,7 @@ script = ExtResource("1_kpxol")
 sprite_frames = SubResource("SpriteFrames_vdysv")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.464869
+frame_progress = 0.787122
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 0)
