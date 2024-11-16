@@ -147,7 +147,7 @@ script = ExtResource("1_ugxrt")
 sprite_frames = SubResource("SpriteFrames_q8iyi")
 animation = &"attack"
 autoplay = "idle"
-frame_progress = 0.425662
+frame_progress = 0.506163
 script = SubResource("GDScript_33vpi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

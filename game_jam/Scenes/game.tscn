@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=4 uid="uid://d0k31vkedmu6m"]
+[gd_scene load_steps=9 format=4 uid="uid://d0k31vkedmu6m"]
 
 [ext_resource type="PackedScene" uid="uid://dtnh86t6rwlfl" path="res://Scenes/knight.tscn" id="1_w7l5v"]
+[ext_resource type="Script" path="res://Scenes/main_screen.gd" id="1_ywgik"]
 [ext_resource type="Texture2D" uid="uid://bpvh7o8mp7vof" path="res://Assets/sprites/Dungeon/Dungeon Tile Set.png" id="2_v4558"]
 [ext_resource type="PackedScene" uid="uid://dddmyh6vsxf6e" path="res://Scenes/orc.tscn" id="3_mno4f"]
 
@@ -382,6 +383,7 @@ sources/0 = SubResource("TileSetAtlasSource_t8i4w")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(5, 5)
+script = ExtResource("1_ywgik")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_2xhkv")
@@ -393,7 +395,7 @@ tile_map_data = PackedByteArray("AAD7/wEAAAACAAIAAAD8/wEAAAACAAIAAAD9/wEAAAACAAI
 tile_set = SubResource("TileSet_2xhkv")
 
 [node name="fg" type="TileMapLayer" parent="TileMap"]
-tile_map_data = PackedByteArray("AAD7/wIAAAABAAEAAAD8/wIAAAACAAEAAAD9/wIAAAACAAEAAAD+/wIAAAACAAEAAAD//wIAAAACAAEAAAAAAAIAAAACAAEAAAD8/wEAAAANAAsAAAD8/wAAAAANAAoAAAABAAEAAAAFAAEAAAACAAAAAAAFAAEAAAABAAIAAAAFAAIAAAACAAEAAAAFAAIAAAADAAAAAAACAAEAAAAEAAAAAAACAAEAAAAFAAAAAAACAAEAAAA=")
+tile_map_data = PackedByteArray("AAD7/wIAAAABAAEAAAD8/wIAAAACAAEAAAD9/wIAAAACAAEAAAD+/wIAAAACAAEAAAD//wIAAAACAAEAAAAAAAIAAAACAAEAAAD8/wEAAAANAAsAAAD8/wAAAAANAAoAAAABAAEAAAAFAAEAAAACAAAAAAAFAAEAAAABAAIAAAAFAAIAAAACAAEAAAAFAAIAAAADAAAAAAACAAEAAAAEAAAAAAACAAEAAAAFAAAAAAACAAEAAAAGAAAAAAACAAEAAAAHAAAAAAACAAEAAAAIAAAAAAACAAEAAAAJAAAAAAACAAEAAAAKAAAAAAACAAEAAAALAAAAAAACAAEAAAAMAAAAAAACAAEAAAANAAAAAAACAAEAAAAOAAAAAAACAAEAAAAPAAAAAAADAAEAAAAPAAEAAAADAAIAAAAPAAIAAAADAAIAAAAPAAMAAAABAAEAAAAQAAMAAAABAAEAAAARAAMAAAABAAEAAAASAAMAAAABAAEAAAATAAMAAAABAAEAAAAUAAMAAAABAAEAAAAVAAMAAAABAAEAAAAWAAMAAAABAAEAAAAXAAMAAAABAAEAAAA=")
 tile_set = SubResource("TileSet_x7jfl")
 
 [node name="Knight" parent="." instance=ExtResource("1_w7l5v")]

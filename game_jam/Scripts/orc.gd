@@ -29,8 +29,7 @@ func _physics_process(delta: float) -> void:
 		sprite.play("attack")
 		attacking = true
 		
-	if attacking == false:
-		if position.distance_to(player_position) > 5:
+	if position.distance_to(player_position) > 5:
 			velocity.x = target_position.x * SPEED
 
 	move_and_slide()
