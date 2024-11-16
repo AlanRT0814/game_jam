@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@onready var player = get_parent().get_node( "Knight")
+
 const life = 10
 
 const SPEED = 100.0
@@ -9,7 +11,13 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-		
+	
+	var player_position = player.position
+	var target_position = (player_position - position).normalized( )
+	
+	if position.distance_to(player_position) > 3:
+		var velocity = target_position * SPEED
+		move_and_slide(velocity)
 	
 
 	## Handle jump.
