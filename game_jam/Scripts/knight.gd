@@ -40,6 +40,8 @@ func handle_animation(dir):
 	
 	else:
 		animated_spirte.play("idle")
+		
+	print(attack_1)
 
 func sprite_flip(direction):
 	if direction > 0:
