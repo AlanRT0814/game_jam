@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://d0k31vkedmu6m"]
+[gd_scene load_steps=8 format=4 uid="uid://d0k31vkedmu6m"]
 
 [ext_resource type="PackedScene" uid="uid://dtnh86t6rwlfl" path="res://Scenes/knight.tscn" id="1_w7l5v"]
 [ext_resource type="Texture2D" uid="uid://bpvh7o8mp7vof" path="res://Assets/sprites/Dungeon/Dungeon Tile Set.png" id="2_v4558"]
+[ext_resource type="PackedScene" uid="uid://dddmyh6vsxf6e" path="res://Scenes/orc.tscn" id="3_mno4f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s2860"]
 texture = ExtResource("2_v4558")
@@ -396,3 +397,5 @@ tile_map_data = PackedByteArray("AAD7/wIAAAABAAEAAAD8/wIAAAACAAEAAAD9/wIAAAACAAE
 tile_set = SubResource("TileSet_x7jfl")
 
 [node name="Knight" parent="." instance=ExtResource("1_w7l5v")]
+
+[node name="Orc" parent="." instance=ExtResource("3_mno4f")]

@@ -192,7 +192,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8tstb")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack_1",
 "speed": 8.0
 }, {
@@ -331,7 +331,8 @@ script = ExtResource("1_kpxol")
 sprite_frames = SubResource("SpriteFrames_vdysv")
 animation = &"attack_1"
 autoplay = "idle"
-frame_progress = 0.719645
+frame = 6
+frame_progress = 1.0
 
 [node name="Timer" type="Timer" parent="k_animation"]
 

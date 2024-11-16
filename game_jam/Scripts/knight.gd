@@ -1,12 +1,13 @@
 extends CharacterBody2D
-
-
+ 
 const SPEED = 150.0
 const JUMP_VELOCITY = -300.0
 
-@onready var animated_spirte = $k_animation
+@onready var animated_sprite = $k_animation
+@onready var time = $k_animation/Timer
+
 var current_state : String
-var attack_1 = false
+var is_attacking = false
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -32,20 +33,29 @@ func _physics_process(delta: float) -> void:
 func handle_animation(dir):
 	sprite_flip(dir)
 	
-	if attack_1 == false:
-		attack_1 = Input.is_action_pressed("attack_1")
-	
-	if attack_1:
-		animated_spirte.play("attack_1")
-	
-	else:
-		animated_spirte.play("idle")
+	if Input.is_action_pressed("attack_1") and not is_attacking:
+		start_attack()
 		
-	print(attack_1)
+	#if is_attacking == false:
+		#anim	ated_sprite.play("idle")
+	
 
 func sprite_flip(direction):
 	if direction > 0:
-		animated_spirte.flip_h = false
+		animated_sprite.flip_h = false
 	
 	elif direction < 0:
-		animated_spirte.flip_h = true
+		animated_sprite.flip_h = true
+		
+func start_attack():
+	is_attacking = true
+	animated_sprite.play("attack_1")
+	await animated_sprite.animation_finished
+	end_attack()
+	
+	
+func end_attack() -> void:
+	is_attacking = false
+	
+
+	
