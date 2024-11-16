@@ -4,7 +4,7 @@ extends CharacterBody2D
 @onready var sprite = $Orc_animation
 
 const life = 10
-const SPEED = 50.0
+const SPEED = 30.0
 const JUMP_VELOCITY = -200.0
 var attacking = false
 
@@ -30,16 +30,11 @@ func _physics_process(delta: float) -> void:
 		attacking = true
 		
 	if attacking == false:
-		if position.distance_to(player_position) > 15:
+		if position.distance_to(player_position) > 5:
 			velocity.x = target_position.x * SPEED
-	
-	sprite_flip(direction)
-	
-	
 
 	move_and_slide()
 
-	
 
 func sprite_flip(direction):
 	if direction > 0:
