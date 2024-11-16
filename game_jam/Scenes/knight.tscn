@@ -365,7 +365,7 @@ script = ExtResource("1_kpxol")
 sprite_frames = SubResource("SpriteFrames_vdysv")
 animation = &"block"
 autoplay = "idle"
-frame_progress = 0.802804
+frame_progress = 0.400866
 
 [node name="Timer" type="Timer" parent="k_animation"]
 

@@ -95,7 +95,7 @@ size = Vector2(8, 14)
 [node name="Orc" type="CharacterBody2D"]
 script = ExtResource("1_ugxrt")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Orc_animation" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_q8iyi")
 animation = &"hit"
 autoplay = "idle"
