@@ -405,3 +405,4 @@ zoom = Vector2(5, 5)
 script = SubResource("GDScript_f1ec1")
 
 [node name="Orc" parent="." instance=ExtResource("3_mno4f")]
+position = Vector2(79, -24)

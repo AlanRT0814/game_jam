@@ -192,19 +192,19 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_slg4s")
 }, {
-"duration": 10.0,
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_tnsiu")
 }, {
-"duration": 10.0,
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_ag2pv")
 }, {
-"duration": 10.0,
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_00gtg")
 }, {
-"duration": 10.0,
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_i36p0")
 }, {
-"duration": 10.0,
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_0usi6")
 }, {
 "duration": 1.0,
@@ -357,30 +357,30 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ymwct"]
-size = Vector2(1.66667, 12)
+size = Vector2(17, 21)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_45sq2"]
-size = Vector2(6.5, 12)
+size = Vector2(6.25, 14)
 
 [node name="Knight" type="CharacterBody2D"]
+collision_layer = 2
 script = ExtResource("1_kpxol")
 
 [node name="k_animation" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_vdysv")
-animation = &"attack_1"
+animation = &"death"
 autoplay = "idle"
-frame = 1
-frame_progress = 0.733291
 
 [node name="Timer" type="Timer" parent="k_animation"]
 
 [node name="Area2D" type="Area2D" parent="k_animation"]
+collision_layer = 2
 script = ExtResource("9_1n5o1")
 
 [node name="sword" type="CollisionShape2D" parent="k_animation/Area2D"]
-position = Vector2(7, -10)
+position = Vector2(12.5, -2.5)
 shape = SubResource("RectangleShape2D_ymwct")
 
 [node name="body" type="CollisionShape2D" parent="."]
-position = Vector2(0.75, 1)
+position = Vector2(0.125, 0)
 shape = SubResource("RectangleShape2D_45sq2")

@@ -7,6 +7,7 @@ const JUMP_VELOCITY = -300.0
 @onready var time = $k_animation/Timer
 
 var is_attacking = false
+var direction = 0
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -18,7 +19,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 
 	# Get input directions -1, 0, 1 -> left, center, right
-	var direction := Input.get_axis("move_left", "move_right")
+	direction = Input.get_axis("move_left", "move_right")
 	
 	if direction:
 		velocity.x = direction * SPEED
@@ -55,6 +56,6 @@ func start_attack():
 	
 func end_attack() -> void:
 	is_attacking = false
-	
+
 
 	
