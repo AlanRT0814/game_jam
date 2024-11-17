@@ -6,7 +6,6 @@ const JUMP_VELOCITY = -300.0
 @onready var animated_sprite = $k_animation
 @onready var time = $k_animation/Timer
 
-var current_state : String
 var is_attacking = false
 
 func _physics_process(delta: float) -> void:

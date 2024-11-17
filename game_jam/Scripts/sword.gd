@@ -1,6 +1,8 @@
-extends Camera2D
+extends AnimatableBody2D
 
-@onready var player = get_node( "Knight")
+@onready var animated_sprite = $".."
+@onready var attacking = $"../..".is_attacking
+var frame = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -9,4 +11,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	
+	if attacking:
+		if animated_sprite.frame_changed:
+			frame += 1
+			
+	if frame == 1:
+		position = Vector2(55, 0)
